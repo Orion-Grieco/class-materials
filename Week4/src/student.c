@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct student{
+struct student
+{
   int studentID;
   char *studentName;
   float studentGPA;
 };
 
-int main() {
+int main()
+{
   struct student s1;
-  struct student* s2;
-  //int size = 10;
+  struct student *s2;
+  // int size = 10;
   s2 = &s1;
   // using struct directly
   s1.studentID = 1001;
@@ -17,8 +19,7 @@ int main() {
   s1.studentGPA = 3.8;
   // using pointer to struct
 
-
-  //processing the struct
+  // processing the struct
   printf("%d\t%s\t%f\n", s1.studentID, s1.studentName, s1.studentGPA);
   printf("%d\t%s\t%f\n", s2->studentID, s2->studentName, s2->studentGPA);
 

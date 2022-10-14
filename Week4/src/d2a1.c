@@ -12,13 +12,10 @@ void filler(int *arr2, int rs, int cs)
 		}
 	}
 }
-void display(int *arr2, int rs, int cs)
-{
-	for (int i = 0; i < rs; i++)
-	{
-		for (int j = 0; j < cs; j++)
-		{
-			printf("%d\t", *(arr2 + i * cs + j));
+void display(int *arr2, int rs, int cs){
+	for (int i = 0 ; i < rs; i++){
+		for (int j = 0 ; j < cs; j++){
+			printf("%d\t", *(arr2 + i*cs + j));
 		}
 		printf("\n");
 	}

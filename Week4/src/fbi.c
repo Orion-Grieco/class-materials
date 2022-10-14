@@ -5,7 +5,7 @@
 void write(char *file){
 	// write to file
 	FILE *fp = fopen(file, "w+"); // w+ is for write mode for file writing
-	int upper = 10006, lower = 10001;
+	int upper = 100000, lower = 10001;
 	srand(time(0));
 	for (int i = 1; i <= SIZE; i++){
 		int location = (rand() / (double)RAND_MAX) * (upper - lower) + lower;
@@ -34,11 +34,9 @@ void load(char *file, int *arr){
 			 location = 10* location + digit;
 		}
  	}
-	
-	
 }
 void transform(int *arr, int *twod, int rows){
-	/*
+	
 	for(int i = 0; i < rows;i++){
 		for(int j = 0; j < SIZE; j++){
 			if (*(twod + 2*i) == *(arr + j)){
@@ -46,29 +44,35 @@ void transform(int *arr, int *twod, int rows){
 			}
 		}
 	}
-	*/
+
 }
 void report1(int *arr){
-	/*
+	
 	for(int i = 0; i < SIZE;i++){
 		printf("%d\t", *(arr + i));
 	}
 	printf("\n");
-	*/
+	
 	
 }
 
 void report2(int *twod, int rows){
-	/*
+	
 	for(int i = 0; i < rows;i++){
 		printf("%d\t%d\n", *(twod + 2*i), *(twod + 2*i + 1));
 	}
-	*/
+	
 }
 void identifySuspect(int *twod, int rows){
 	int high_count = 0;
 	int suspect_location = 0;
 	/* add logic here */
+	for(int i = 0; i < rows;i++){
+		if (*(twod + 2*i + 1) > high_count){
+			high_count = *(twod + 2*i + 1);
+			suspect_location = *(twod + 2*i);
+		}
+	}
 	printf("Suspect may be in: %d\n", suspect_location);
 }
 int main(){

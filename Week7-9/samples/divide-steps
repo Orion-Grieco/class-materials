@@ -1,0 +1,13 @@
+1) First, initialize A, Q, and M registers with their respective values. 
+	a) Q -> Dividend (numerator) and M -> Divisor (denominator).
+	b) n -> number of bits in Q
+	c) Initialize the binary form of the Dividend in Q using n bits.
+	d) A and M are initialized using n+1 number of bits. 
+	   The A register is initialized with all 0's. The M register is initialized with the binary form of the Divisor. 
+	d) Set Count = n
+2) Iterate until count becomes 0:
+   a) Left shift A and Q registers together (combined as one unit). Mark the last bit in Q as dash. 
+   b) Subtract A = A-M
+   c) If left most bit of A is 0 then set last bit of Q with the value 1.
+   d) If left most bit of A is 1 then set last bit of Q with the value 0 and restore by doing A = A+M
+   e) Decrement count for next iteration. 

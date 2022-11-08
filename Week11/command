@@ -1,0 +1,6 @@
+Prerequiste: Java (JDK) installation.
+Command to run logisim on your machine:
+java -jar mars.jar hello.asm
+
+Instruction to Binary:
+java -jar mars.jar a dump .text HexText hexcode.txt add.asm

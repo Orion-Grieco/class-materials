@@ -19,8 +19,7 @@ li $t1, 65
 # branch to different operations
 main:
   bge $t0,$t1,rule1
-  beq $t0,$t1,rule1
-  ble $t0,$t1,rule2
+  blt $t0,$t1,rule2
 rule1:
   li $v0, 4
   la $a0, hot

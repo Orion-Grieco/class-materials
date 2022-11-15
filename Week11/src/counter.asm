@@ -3,7 +3,7 @@ break:  .asciiz     "\n"
 .text
 li $t1, 1
 li $t2, 1
-li $t3, 5
+li $t3, 6
 
 counter:
     li $v0, 1

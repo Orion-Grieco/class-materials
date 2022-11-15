@@ -3,6 +3,7 @@
 prompt:  .asciiz     "\nEnter the current temperature:\n"
 hot:     .asciiz     "hot\n"
 cold:    .asciiz     "cold\n"
+mild: 	 .asciiz     "mild\n"
 
 .text
 # prompt the current temp
@@ -16,6 +17,7 @@ syscall
 move $t0, $v0
 
 li $t1, 65
+li #t2, 50
 # branch to different operations
 main:
   bge $t0,$t1,rule1
